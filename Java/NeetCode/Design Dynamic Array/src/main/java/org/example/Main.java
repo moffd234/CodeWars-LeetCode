@@ -1,9 +1,12 @@
 package org.example;
 
 class DynamicArray {
+    int[] array;
+    int size;
 
     public DynamicArray(int capacity) {
-
+        array = new int[capacity];
+        size = capacity;
     }
 
     public int get(int i) {
