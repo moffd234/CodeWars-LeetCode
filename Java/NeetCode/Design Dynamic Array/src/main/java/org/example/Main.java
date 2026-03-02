@@ -2,11 +2,11 @@ package org.example;
 
 class DynamicArray {
     int[] array;
-    int size;
+    int capacity;
 
     public DynamicArray(int capacity) {
         array = new int[capacity];
-        size = capacity;
+        this.capacity = capacity;
     }
 
     public int get(int i) {
@@ -30,10 +30,10 @@ class DynamicArray {
     }
 
     public int getSize() {
-        return size;
+        return 0;
     }
 
     public int getCapacity() {
-        return 0;
+        return capacity;
     }
 }
