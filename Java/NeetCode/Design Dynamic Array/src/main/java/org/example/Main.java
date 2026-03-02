@@ -31,11 +31,19 @@ class DynamicArray {
     }
 
     public void pushback(int n) {
+        if(size == capacity){
+            resize();
+        }
 
+        array[size] = n;
+        size += 1;
     }
 
     public int popback() {
-        return 0;
+        int output = array[size - 1];
+        size -= 1;
+
+        return output;
     }
 
     private void resize() {
