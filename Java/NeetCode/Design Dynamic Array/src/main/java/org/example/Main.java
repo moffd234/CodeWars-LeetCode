@@ -14,6 +14,7 @@ int getCapacity() will return the capacity of the array.
 
 class DynamicArray {
     int[] array;
+    int size = 0;
     int capacity;
 
     public DynamicArray(int capacity) {
@@ -38,7 +39,14 @@ class DynamicArray {
     }
 
     private void resize() {
+        capacity *= 2;
+        int[] newArray = new int[capacity];
 
+        for(int i = 0; i < size; i++){
+            newArray[i] = array[i];
+        }
+
+        array = newArray;
     }
 
     public int getSize() {
