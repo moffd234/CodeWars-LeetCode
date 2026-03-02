@@ -50,7 +50,7 @@ class DynamicArray {
     }
 
     public int getSize() {
-        return 0;
+        return size;
     }
 
     public int getCapacity() {
