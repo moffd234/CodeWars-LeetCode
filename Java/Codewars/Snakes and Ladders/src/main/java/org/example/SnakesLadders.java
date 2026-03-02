@@ -3,23 +3,28 @@ package org.example;
 import java.util.Map;
 
 public class SnakesLadders {
-    private final Map<Integer, Integer> snakeLadderMap = Map.of(
-            2,38,
-            7, 14,
-            8,31,
-            15, 26,
-            16, 6,
-            36, 44,
-            46, 25,
-            49, 11,
-            51, 67,
-            62, 19,
-            64, 60,
-            74, 53,
-            78, 98,
-            87, 94,
+    private final Map<Integer, Integer> snakeLadderMap = Map.ofEntries(
+            Map.entry(2, 38),
+            Map.entry(7, 14),
+            Map.entry(8,31),
+            Map.entry(15, 26),
+            Map.entry(16, 6),
+            Map.entry(28, 84),
+            Map.entry(36, 44),
+            Map.entry(46, 25),
+            Map.entry(49, 11),
+            Map.entry(51, 67),
+            Map.entry(62, 19),
+            Map.entry(64, 60),
+            Map.entry(71, 91),
+            Map.entry(74, 53),
+            Map.entry(78, 98),
+            Map.entry(87, 94),
+            Map.entry(89, 68),
+            Map.entry(92, 88),
+            Map.entry(95, 75),
+            Map.entry(99, 80));
 
-    );
     public SnakesLadders() {}
     public String play(int die1, int die2) {
         return "";
