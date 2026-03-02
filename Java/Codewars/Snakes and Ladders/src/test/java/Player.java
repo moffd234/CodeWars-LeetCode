@@ -2,7 +2,13 @@ public class Player {
     private int pos = 0;
 
     public int move(int num){
-        return 0;
+        pos += num;
+
+        if(pos > 100){
+            pos = 100 - (pos - 100);
+        }
+
+        return pos;
     }
 
     public int getPos() {
