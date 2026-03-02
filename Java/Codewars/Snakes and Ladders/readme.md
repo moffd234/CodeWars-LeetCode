@@ -8,7 +8,7 @@ The Board
 Rules
 
     There are two players, and both start off the board on square 0.
-    Player 1 starts and alternates with player 2.
+    org.example.Player 1 starts and alternates with player 2.
     You follow the numbers up the board in order from 1 to 100.
     If the values of both dice are the same, that player will have another turn.
     Climb up ladders. The ladders on the game board allow you to move upwards and get ahead faster. If you land exactly on a square that shows the bottom of a ladder, you may move the player all the way up to the square at the top of the ladder (even if you roll a double).
@@ -18,10 +18,10 @@ Rules
 
 Returns
 
-Return "Player n Wins!" where n is the winning player who has landed on square 100 without any remaining moves left.
+Return "org.example.Player n Wins!" where n is the winning player who has landed on square 100 without any remaining moves left.
 
 Return "Game over!" if a move is attempted after any player has won.
 
-Otherwise, return "Player n is on square x", where n is the current player and x is the square they are currently on.
+Otherwise, return "org.example.Player n is on square x", where n is the current player and x is the square they are currently on.
 
 Good luck and enjoy!

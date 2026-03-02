@@ -1,10 +1,12 @@
+package org.example;
+
 public class Player {
     private int pos = 0;
 
-    public int move(int num){
+    public int move(int num) {
         pos += num;
 
-        if(pos > 100){
+        if (pos > 100) {
             pos = 100 - (pos - 100);
         }
 
