@@ -36,6 +36,23 @@ public class SnakesLadders {
         return "";
     }
 
+    private String endTurn(int die1, int die2) {
+        if(die1 != die2) {
+            if (currentPlayer == player1) {
+                currentPlayer = player2;
+                return "Player 1 is on square " + player1.getPos();
+            }
+
+            currentPlayer = player1;
+            return "Player 2 is on square " + player2.getPos();
+        }
+        if (currentPlayer == player1) {
+            return "Player 1 is on square " + player1.getPos();
+        }
+
+        return "Player 2 is on square " + player2.getPos();
+    }
+
     public void movePlayer(Player player, int moveDist){
         int newPos = player.move(moveDist);
 
