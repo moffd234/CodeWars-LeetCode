@@ -33,7 +33,18 @@ public class SnakesLadders {
 
     public SnakesLadders() {}
     public String play(int die1, int die2) {
-        return "";
+        if(isGameOver){
+            return "Game over!";
+        }
+
+        movePlayer(currentPlayer, die1 + die2);
+
+        if(currentPlayer.getPos() == 100){
+            isGameOver = true;
+            return getWinner();
+        }
+
+        return endTurn(die1, die2);
     }
 
     private String endTurn(int die1, int die2) {
