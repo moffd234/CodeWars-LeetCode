@@ -5,6 +5,8 @@ import java.util.Map;
 public class SnakesLadders {
     Player player1 = new Player();
     Player player2 = new Player();
+    Player currentPlayer = player1;
+    boolean isGameOver = false;
 
     private final Map<Integer, Integer> snakeLadderMap = Map.ofEntries(
             Map.entry(2, 38),
@@ -12,6 +14,7 @@ public class SnakesLadders {
             Map.entry(8,31),
             Map.entry(15, 26),
             Map.entry(16, 6),
+            Map.entry(21, 42),
             Map.entry(28, 84),
             Map.entry(36, 44),
             Map.entry(46, 25),
@@ -37,6 +40,14 @@ public class SnakesLadders {
         int newPos = player.move(moveDist);
 
         player.setPos(snakeLadderMap.getOrDefault(newPos, newPos));
+    }
+
+    private String getWinner(){
+        if(currentPlayer == player1){
+            return "Player 1 Wins!";
+        }
+
+        return "Player 2 Wins!";
     }
 
     public Player getPlayer1() {
