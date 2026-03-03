@@ -33,9 +33,17 @@ public class SnakesLadders {
         return "";
     }
 
-    public void movePlayer(Player player, int die1, int die2){
-        int newPos = player.move(die1 + die2);
+    public void movePlayer(Player player, int moveDist){
+        int newPos = player.move(moveDist);
 
         player.setPos(snakeLadderMap.getOrDefault(newPos, newPos));
+    }
+
+    public Player getPlayer1() {
+        return player1;
+    }
+
+    public Player getPlayer2() {
+        return player2;
     }
 }
