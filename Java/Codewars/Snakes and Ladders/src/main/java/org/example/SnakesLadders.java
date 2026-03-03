@@ -3,6 +3,9 @@ package org.example;
 import java.util.Map;
 
 public class SnakesLadders {
+    Player player1 = new Player();
+    Player player2 = new Player();
+
     private final Map<Integer, Integer> snakeLadderMap = Map.ofEntries(
             Map.entry(2, 38),
             Map.entry(7, 14),
@@ -28,5 +31,11 @@ public class SnakesLadders {
     public SnakesLadders() {}
     public String play(int die1, int die2) {
         return "";
+    }
+
+    public void movePlayer(Player player, int die1, int die2){
+        int newPos = player.move(die1 + die2);
+
+        player.setPos(snakeLadderMap.getOrDefault(newPos, newPos));
     }
 }
