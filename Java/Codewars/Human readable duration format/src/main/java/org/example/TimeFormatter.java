@@ -5,8 +5,16 @@ import java.util.ArrayList;
 public class TimeFormatter {
 
     public static String formatDuration(int seconds) {
-        // your code goes here
-        return null;
+        final int SECONDS_IN_MINUTE = 60;
+        final int SECONDS_IN_HOUR = 3600;
+
+        int hours = seconds / SECONDS_IN_HOUR;
+        int remainder = seconds % SECONDS_IN_HOUR;
+
+        int minutes = remainder / SECONDS_IN_MINUTE;
+        remainder = remainder % SECONDS_IN_MINUTE;
+
+        return formatOutput(hours, minutes, remainder);
     }
 
     public static String formatOutput(int hours, int minutes, int seconds){
