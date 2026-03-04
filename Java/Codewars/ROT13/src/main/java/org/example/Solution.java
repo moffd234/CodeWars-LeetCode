@@ -3,7 +3,13 @@ package org.example;
 public class Solution {
 
     public static String rot13(String message) {
-        return "";
+        StringBuilder output = new StringBuilder();
+
+        for (char c : message.toCharArray()) {
+            output.append(convertChar(c));
+        }
+
+        return output.toString();
     }
 
 
