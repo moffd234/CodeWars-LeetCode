@@ -3,9 +3,13 @@ package org.example;
 import java.util.ArrayList;
 
 class LinkedList {
+    private Node head;
+    private Node tail;
+    private int size = 0;
 
     public LinkedList() {
-
+        this.head = null;
+        this.tail = null;
     }
 
     public int get(int index) {
@@ -29,10 +33,10 @@ class LinkedList {
     }
 
     private class Node{
-        private int val;
+        private Integer val;
         private Node next;
 
-        public Node(int val, Node next) {
+        public Node(Integer val, Node next) {
             this.val = val;
             this.next = next;
         }
