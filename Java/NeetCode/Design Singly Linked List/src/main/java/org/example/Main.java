@@ -21,7 +21,15 @@ class LinkedList {
     }
 
     public void insertTail(int val) {
+        Node newTail = new Node(val, null);
 
+        if (tail != null) {
+            tail.setNext(newTail);
+        } else {
+            head = newTail;
+        }
+
+        tail = newTail;
     }
 
     public boolean remove(int index) {
@@ -32,7 +40,7 @@ class LinkedList {
         return new ArrayList<>();
     }
 
-    private class Node{
+    private static class Node {
         private Integer val;
         private Node next;
 
