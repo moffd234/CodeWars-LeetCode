@@ -17,7 +17,13 @@ class LinkedList {
     }
 
     public void insertHead(int val) {
+        Node newHead = new Node(val, head);
 
+        if (head == null) {
+            tail = newHead;
+        }
+
+        head = newHead;
     }
 
     public void insertTail(int val) {
