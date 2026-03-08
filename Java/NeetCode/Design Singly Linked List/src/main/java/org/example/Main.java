@@ -20,11 +20,11 @@ class LinkedList {
         Node current = head;
 
         for(int i = 0; i < index; i++){
-            current = current.getNext();
+            current = current.next;
         }
 
 
-        return current.getVal();
+        return current.val;
     }
 
     public void insertHead(int val) {
@@ -42,7 +42,7 @@ class LinkedList {
         Node newTail = new Node(val, null);
 
         if (tail != null) {
-            tail.setNext(newTail);
+            tail.next = newTail;
         } else {
             head = newTail;
         }
@@ -90,27 +90,11 @@ class LinkedList {
     }
 
     private static class Node {
-        private Integer val;
+        private final Integer val;
         private Node next;
 
         public Node(Integer val, Node next) {
             this.val = val;
-            this.next = next;
-        }
-
-        public int getVal() {
-            return val;
-        }
-
-        public void setVal(int val) {
-            this.val = val;
-        }
-
-        public Node getNext() {
-            return next;
-        }
-
-        public void setNext(Node next) {
             this.next = next;
         }
     }
