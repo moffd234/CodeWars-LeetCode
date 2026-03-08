@@ -17,16 +17,10 @@ class LinkedList {
             return -1;
         }
 
-        if(index == size - 1){
-            return tail.getVal();
-        }
-
         Node current = head;
-        int currentIndex = 0;
 
-        while(currentIndex < index){
+        for(int i = 0; i < index; i++){
             current = current.getNext();
-            currentIndex++;
         }
 
 
