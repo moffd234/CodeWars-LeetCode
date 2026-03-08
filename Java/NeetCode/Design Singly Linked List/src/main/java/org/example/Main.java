@@ -13,7 +13,24 @@ class LinkedList {
     }
 
     public int get(int index) {
-        return 0;
+        if(index >= size){
+            return -1;
+        }
+
+        if(index == size - 1){
+            return tail.getVal();
+        }
+
+        Node current = head;
+        int currentIndex = 0;
+
+        while(currentIndex < index){
+            current = current.getNext();
+            currentIndex++;
+        }
+
+
+        return current.getVal();
     }
 
     public void insertHead(int val) {
