@@ -35,6 +35,7 @@ class LinkedList {
         }
 
         head = newHead;
+        size++;
     }
 
     public void insertTail(int val) {
@@ -47,10 +48,41 @@ class LinkedList {
         }
 
         tail = newTail;
+        size++;
     }
 
     public boolean remove(int index) {
-        return false;
+
+        if(index >= size){
+            return false;
+        }
+
+        if(index == 0){
+            head = head.next;
+            size--;
+
+            if (size == 0) {
+                tail = null;
+            }
+
+            return true;
+        }
+
+        Node prevNode = head;
+
+        for(int i = 0; i < index - 1; i++){
+            prevNode = prevNode.next;
+        }
+
+        Node nodeToRemove = prevNode.next;
+        prevNode.next = nodeToRemove.next;
+        size--;
+
+        if(nodeToRemove == tail){
+            tail = prevNode;
+        }
+
+        return true;
     }
 
     public ArrayList<Integer> getValues() {
