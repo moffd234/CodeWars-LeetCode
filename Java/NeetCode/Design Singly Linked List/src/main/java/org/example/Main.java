@@ -86,7 +86,16 @@ class LinkedList {
     }
 
     public ArrayList<Integer> getValues() {
-        return new ArrayList<>();
+        ArrayList<Integer> output = new ArrayList<>(size);
+
+        Node current = head;
+
+        while(current != null){
+            output.add(current.val);
+            current = current.next;
+        }
+
+        return output;
     }
 
     private static class Node {
